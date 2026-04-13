@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+}
+#container {
+  display: flex;
+  min-height: 100vh;
+}
+#nav {
+  background: #222;
+  color: #fff;
+  min-width: 200px;
+  max-width: 220px;
+  transition: width 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+#nav.collapsed {
+  min-width: 40px;
+  max-width: 50px;
+}
+#nav .nav-link {
+  padding: 16px;
+  border: none;
+  background: none;
+  color: inherit;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  border-bottom: 1px solid #333;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+#nav .nav-link.active {
+  background: #444;
+}
+#nav .nav-link span {
+  margin-left: 8px;
+}
+#nav.collapsed .nav-link span {
+  display: none;
+}
+#main {
+  flex: 1;
+  padding: 32px 16px;
+  background: #fff;
+  min-width: 0;
+}
+@media (max-width: 300px) {
+  #nav {
+    min-width: 30px;
+    max-width: 40px;
+  }
+  #main {
+    padding: 8px 2px;
+  }
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.product-card {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 16px;
+  width: 180px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-card .emoji {
+  font-size: 2.5rem;
+}
+.product-card button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.cart-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cart-list th, .cart-list td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+.cart-list th {
+  background: #f0f0f0;
+}
+.cart-list td button {
+  padding: 4px 8px;
+  margin-left: 4px;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.summary {
+  margin-top: 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+button.process-order {
+  margin-top: 16px;
+  background: #27ae60;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
